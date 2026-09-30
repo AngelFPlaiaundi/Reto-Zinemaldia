@@ -1,8 +1,16 @@
+<!-- Este es HTML, hemos puesto cosas las cuales les daremos un un uso mas adeltante, por los momentos solo son botones o textos, medante vayamos avanzo implementaremos su uso -->
+
 <!DOCTYPE html>
+<!-- Le avisa al navegador que esta página usa la versión estándar de HTML -->
 <html lang="es">
+<!-- Indica que el texto está en español para que los navegadores y lectores de voz sepan cómo leerlo -->
+
 <head>
+  <!-- Aquí van los datos "internos" de la página: título, descripción para buscadores y cómo se verá en redes sociales -->
   <meta charset="UTF-8">
+  <!-- Asegura que las tildes, la letra 'ñ' y los símbolos se muestren correctamente -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Hace que la página se ajuste perfectamente a móviles, tablets y ordenadores -->
   <title>Donostiako Zinemaldia — Programación y entradas</title>
   <meta name="description" content="Consulta la programación del Festival de San Sebastián por día, sala y sección, y compra tus entradas.">
   <meta property="og:title" content="Donostiako Zinemaldia — Programación y entradas">
@@ -12,17 +20,25 @@
   <meta name="twitter:title" content="Donostiako Zinemaldia — Programación y entradas">
   <meta name="twitter:description" content="Horarios, salas y venta de entradas del Festival de Cine de San Sebastián.">
 </head>
+
 <body>
   <div>
-    <a>Saltar al contenido principal</a>
-    
+    <!-- Un atajo útil para que quienes navegan con teclado o lector de voz salten directamente al contenido -->
+    <a href="#contenido-principal">Saltar al contenido principal</a>
+
+    <!-- La cabecera superior de la web, donde colocamos el logo, el menú y las opciones del sitio -->
     <header>
       <div>
+        <!-- Enlace de inicio con un texto explicativo para que las tecnologías de asistencia sepan adónde lleva -->
         <a aria-label="Donostiako Zinemaldia, página de inicio">
+          <!-- Ocultamos elementos decorativos o iconos a los lectores de pantalla para no confundir -->
           <span aria-hidden="true">Z</span>
           <span>Zinemaldia<span>74 · San Sebastián</span></span>
         </a>
+
+        <!-- La barra con las opciones del menú principal -->
         <nav aria-label="Navegación principal">
+          <!-- Lista con los enlaces del menú organizados uno a uno -->
           <ul>
             <li><a>Programación</a></li>
             <li><a>Salas y accesos</a></li>
@@ -30,19 +46,26 @@
             <li><a>Contacto</a></li>
           </ul>
         </nav>
+
         <div>
-          <label>Idioma</label>
-          <select>
+          <!-- Nombre o texto descriptivo pegado al menú desplegable de idiomas -->
+          <label for="idioma-select">Idioma</label>
+          <select id="idioma-select">
             <option value="eu">EU</option>
             <option value="es" selected="">ES</option>
             <option value="en">EN</option>
             <option value="fr">FR</option>
           </select>
+
+          <!-- Botón de función rápida con una pequeña ayuda en texto al pasar el ratón -->
           <button type="button" title="Alto contraste">
             <span aria-hidden="true">◐</span>
             <span>Activar alto contraste</span>
           </button>
+
           <a>Comprar entradas</a>
+
+          <!-- Botón para abrir el menú en móviles, informando si está cerrado u abierto -->
           <button type="button" aria-expanded="false">
             <span aria-hidden="true">☰</span>
             <span>Menú</span>
@@ -51,19 +74,29 @@
       </div>
     </header>
 
-    <main>
+    <!-- Aquí dentro va lo más importante de la página (el contenido central) -->
+    <main id="contenido-principal">
+
+      <!-- Primera sección de la página: la presentación principal del festival -->
       <section>
         <div>
           <div>
             <p>18 — 26 septiembre 2026</p>
+
+            <!-- El título principal de toda la página (es recomendable tener solo uno por página) -->
             <h1>Nueve días de cine frente a la Concha.</h1>
+
             <p>Más de 200 películas, 5 salas y una sola pregunta: ¿qué quieres ver hoy? Filtra por día, sala o sección y reserva en dos clics.</p>
+
             <div>
               <a>Ver programación de hoy</a>
               <a>Cómo comprar entradas</a>
             </div>
           </div>
+
+          <!-- Bloque de contenido complementario o datos estadísticos -->
           <aside aria-label="Datos clave">
+            <!-- Una lista estructurada de datos (concepto y valor, como "Películas: 214") -->
             <dl>
               <div>
                 <dt>Películas</dt>
@@ -82,10 +115,13 @@
         </div>
       </section>
 
+      <!-- Segunda sección: la cartelera y los filtros para buscar películas -->
       <section>
+        <!-- Título secundario para indicar el comienzo de este bloque -->
         <h2>Programación</h2>
         <p>Elige un día y afina con los filtros. Los resultados se actualizan al instante.</p>
 
+        <!-- Botones organizados como pestañas para elegir el día del festival -->
         <div role="tablist" aria-label="Días del festival">
           <button role="tab" aria-selected="true">Todos</button>
           <button role="tab" aria-selected="false">Vie 18</button>
@@ -95,14 +131,15 @@
           <button role="tab" aria-selected="false">Mar 22</button>
         </div>
 
+        <!-- Formulario con diferentes filtros de búsqueda (por texto, sala, género, etc.) -->
         <form role="search" aria-label="Filtrar programación">
           <div>
-            <label>Buscar</label>
-            <input type="search" placeholder="Título o director/a" value="">
+            <label for="buscar-input">Buscar</label>
+            <input id="buscar-input" type="search" placeholder="Título o director/a" value="">
           </div>
           <div>
-            <label>Sala</label>
-            <select>
+            <label for="sala-select">Sala</label>
+            <select id="sala-select">
               <option value="" selected="">Todas</option>
               <option>Kursaal 1</option>
               <option>Kursaal 2</option>
@@ -112,8 +149,8 @@
             </select>
           </div>
           <div>
-            <label>Sección</label>
-            <select>
+            <label for="seccion-select">Sección</label>
+            <select id="seccion-select">
               <option value="" selected="">Todas</option>
               <option>Sección Oficial</option>
               <option>Nuev@s Director@s</option>
@@ -123,8 +160,8 @@
             </select>
           </div>
           <div>
-            <label>Género</label>
-            <select>
+            <label for="genero-select">Género</label>
+            <select id="genero-select">
               <option value="" selected="">Todas</option>
               <option>Drama</option>
               <option>Documental</option>
@@ -135,23 +172,33 @@
           </div>
         </form>
 
+        <!-- Esta zona avisa en voz alta a las personas con lectores de pantalla cuando cambian las funciones encontradas -->
         <div aria-live="polite">
           <p>10 sesiones</p>
         </div>
 
+        <!-- Lista donde se muestran las películas una detrás de otra -->
         <ul>
           <li>
+            <!-- Cada película se envuelve como un contenido independiente o "tarjeta" -->
             <article>
+              <!-- Un bloque con la imagen/cartel que incluye una descripción en texto por si no se ve -->
               <div role="img" aria-label="Cartel de la película La marea lenta">
                 <span aria-hidden="true">L</span>
                 <span>Sección Oficial</span>
               </div>
               <div>
-                <p><time>Vie 18 · 16:00</time> — Kursaal 1</p>
+                <p>
+                  <!-- Elemento específico para marcar fechas y horas correctamente -->
+                  <time>Vie 18 · 16:00</time> — Kursaal 1
+                </p>
+
+                <!-- Título específico de esta película (un nivel por debajo del subtítulo de la sección) -->
                 <h3>La marea lenta</h3>
                 <p>Ane Etxeberria · España · 118 min · Drama · VOSE</p>
                 <div>
                   <span><span aria-hidden="true"></span>Últimas entradas</span>
+                  <!-- El botón incluye detalles completos para que al leerlo por separado se sepa para qué película es -->
                   <button aria-label="Comprar entrada para La marea lenta, Vie 18 a las 16:00">Comprar</button>
                 </div>
               </div>
@@ -186,6 +233,7 @@
                 <p>Marc Delorme · Francia · 131 min · Drama · VOSE</p>
                 <div>
                   <span><span aria-hidden="true"></span>Agotado</span>
+                  <!-- Botón desactivado porque ya no quedan entradas disponibles -->
                   <button disabled="" aria-label="Comprar entrada para Les heures claires, Vie 18 a las 22:00">Agotado</button>
                 </div>
               </div>
@@ -313,9 +361,11 @@
         </ul>
       </section>
 
+      <!-- Tercera sección: Guía paso a paso para la compra de entradas -->
       <section>
         <div>
           <h2>Entradas en tres pasos</h2>
+          <!-- Lista numerada ordenada ideal para procesos en secuencia (paso 1, paso 2, paso 3) -->
           <ol>
             <li>
               <span>1</span>
@@ -336,12 +386,14 @@
         </div>
       </section>
 
+      <!-- Cuarta sección: Información práctica sobre cines y accesibilidad -->
       <section>
         <h2>Salas y accesos</h2>
         <p>Todo lo que necesitas para llegar a tiempo y sin sorpresas.</p>
         <div>
           <article>
             <h3>Kursaal</h3>
+            <!-- Etiqueta pensada para direcciones físicas o información de contacto -->
             <address>Av. de Zurriola 1</address>
             <dl>
               <div>
