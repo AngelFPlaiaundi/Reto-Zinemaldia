@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donostiako Zinemaldia — Programación y entradas</title>
+  <meta name="description" content="Consulta la programación del Festival de San Sebastián por día, sala y sección, y compra tus entradas.">
+  <meta property="og:title" content="Donostiako Zinemaldia — Programación y entradas">
+  <meta property="og:description" content="Horarios, salas y venta de entradas del Festival de Cine de San Sebastián.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5qvvmmz1pn92mbpsyxk5zbbr8g/b8e204c7e5d8ee7739fc4a6e7f4e7020_1790583930341.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Donostiako Zinemaldia — Programación y entradas">
+  <meta name="twitter:description" content="Horarios, salas y venta de entradas del Festival de Cine de San Sebastián.">
+  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5qvvmmz1pn92mbpsyxk5zbbr8g/b8e204c7e5d8ee7739fc4a6e7f4e7020_1790583930341.png">
+  <link rel="icon" href="https://cinebuddy-guide.lovable.app/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div>
+    <a href="https://cinebuddy-guide.lovable.app/#contenido">Saltar al contenido principal</a>
+    
+    <header>
+      <div>
+        <a href="https://cinebuddy-guide.lovable.app/" aria-label="Donostiako Zinemaldia, página de inicio">
+          <span aria-hidden="true">Z</span>
+          <span>Zinemaldia<span>74 · San Sebastián</span></span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="https://cinebuddy-guide.lovable.app/#programacion">Programación</a></li>
+            <li><a href="https://cinebuddy-guide.lovable.app/#salas-y-accesos">Salas y accesos</a></li>
+            <li><a href="https://cinebuddy-guide.lovable.app/#entradas">Entradas</a></li>
+            <li><a href="https://cinebuddy-guide.lovable.app/#footer">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <label for="idioma">Idioma</label>
+          <select id="idioma">
+            <option value="eu">EU</option>
+            <option value="es" selected="">ES</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+          </select>
+          <button type="button" title="Alto contraste">
+            <span aria-hidden="true">◐</span>
+            <span>Activar alto contraste</span>
+          </button>
+          <a href="https://cinebuddy-guide.lovable.app/#entradas">Comprar entradas</a>
+          <button type="button" aria-expanded="false" aria-controls="menu-movil">
+            <span aria-hidden="true">☰</span>
+            <span>Menú</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section id="hero" aria-labelledby="hero-titulo">
+        <div>
+          <div>
+            <p>18 — 26 septiembre 2026</p>
+            <h1 id="hero-titulo">Nueve días de cine frente a la Concha.</h1>
+            <p>Más de 200 películas, 5 salas y una sola pregunta: ¿qué quieres ver hoy? Filtra por día, sala o sección y reserva en dos clics.</p>
+            <div>
+              <a href="https://cinebuddy-guide.lovable.app/#programacion">Ver programación de hoy</a>
+              <a href="https://cinebuddy-guide.lovable.app/#entradas">Cómo comprar entradas</a>
+            </div>
+          </div>
+          <aside aria-label="Datos clave">
+            <dl>
+              <div>
+                <dt>Películas</dt>
+                <dd>214</dd>
+              </div>
+              <div>
+                <dt>Sesiones</dt>
+                <dd>580</dd>
+              </div>
+              <div>
+                <dt>Salas</dt>
+                <dd>5</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section id="programacion" aria-labelledby="prog-titulo">
+        <h2 id="prog-titulo">Programación</h2>
+        <p>Elige un día y afina con los filtros. Los resultados se actualizan al instante.</p>
+
+        <div role="tablist" aria-label="Días del festival">
+          <button role="tab" aria-selected="true">Todos</button>
+          <button role="tab" aria-selected="false">Vie 18</button>
+          <button role="tab" aria-selected="false">Sáb 19</button>
+          <button role="tab" aria-selected="false">Dom 20</button>
+          <button role="tab" aria-selected="false">Lun 21</button>
+          <button role="tab" aria-selected="false">Mar 22</button>
+        </div>
+
+        <form role="search" aria-label="Filtrar programación">
+          <div>
+            <label for="buscar">Buscar</label>
+            <input id="buscar" type="search" placeholder="Título o director/a" value="">
+          </div>
+          <div>
+            <label for="sala">Sala</label>
+            <select id="sala">
+              <option value="" selected="">Todas</option>
+              <option>Kursaal 1</option>
+              <option>Kursaal 2</option>
+              <option>Victoria Eugenia</option>
+              <option>Principal</option>
+              <option>Tabakalera</option>
+            </select>
+          </div>
+          <div>
+            <label for="seccion">Sección</label>
+            <select id="seccion">
+              <option value="" selected="">Todas</option>
+              <option>Sección Oficial</option>
+              <option>Nuev@s Director@s</option>
+              <option>Horizontes Latinos</option>
+              <option>Perlak</option>
+              <option>Zabaltegi</option>
+            </select>
+          </div>
+          <div>
+            <label for="genero">Género</label>
+            <select id="genero">
+              <option value="" selected="">Todas</option>
+              <option>Drama</option>
+              <option>Documental</option>
+              <option>Comedia</option>
+              <option>Thriller</option>
+              <option>Animación</option>
+            </select>
+          </div>
+        </form>
+
+        <div aria-live="polite">
+          <p>10 sesiones</p>
+        </div>
+
+        <ul>
+          <li>
+            <article aria-labelledby="t-1">
+              <div role="img" aria-label="Cartel de la película La marea lenta">
+                <span aria-hidden="true">L</span>
+                <span>Sección Oficial</span>
+              </div>
+              <div>
+                <p><time>Vie 18 · 16:00</time> — Kursaal 1</p>
+                <h3 id="t-1">La marea lenta</h3>
+                <p>Ane Etxeberria · España · 118 min · Drama · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Últimas entradas</span>
+                  <button aria-label="Comprar entrada para La marea lenta, Vie 18 a las 16:00">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-2">
+              <div role="img" aria-label="Cartel de la película Norte sin nombre">
+                <span aria-hidden="true">N</span>
+                <span>Horizontes Latinos</span>
+              </div>
+              <div>
+                <p><time>Vie 18 · 19:00</time> — Victoria Eugenia</p>
+                <h3 id="t-2">Norte sin nombre</h3>
+                <p>Lucía Paredes · Argentina · 102 min · Thriller · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Entradas disponibles</span>
+                  <button aria-label="Comprar entrada para Norte sin nombre, Vie 18 a las 19:00">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-3">
+              <div role="img" aria-label="Cartel de la película Les heures claires">
+                <span aria-hidden="true">L</span>
+                <span>Sección Oficial</span>
+              </div>
+              <div>
+                <p><time>Vie 18 · 22:00</time> — Kursaal 1</p>
+                <h3 id="t-3">Les heures claires</h3>
+                <p>Marc Delorme · Francia · 131 min · Drama · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Agotado</span>
+                  <button disabled="" aria-label="Comprar entrada para Les heures claires, Vie 18 a las 22:00">Agotado</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-4">
+              <div role="img" aria-label="Cartel de la película Itsasoaren ahotsa">
+                <span aria-hidden="true">I</span>
+                <span>Zabaltegi</span>
+              </div>
+              <div>
+                <p><time>Sáb 19 · 12:00</time> — Tabakalera</p>
+                <h3 id="t-4">Itsasoaren ahotsa</h3>
+                <p>Iker Zubia · España · 84 min · Documental · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Entradas disponibles</span>
+                  <button aria-label="Comprar entrada para Itsasoaren ahotsa, Sáb 19 a las 12:00">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-5">
+              <div role="img" aria-label="Cartel de la película Paper Moons">
+                <span aria-hidden="true">P</span>
+                <span>Nuev@s Director@s</span>
+              </div>
+              <div>
+                <p><time>Sáb 19 · 17:30</time> — Kursaal 2</p>
+                <h3 id="t-5">Paper Moons</h3>
+                <p>Hana Sato · Japón · 95 min · Animación · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Entradas disponibles</span>
+                  <button aria-label="Comprar entrada para Paper Moons, Sáb 19 a las 17:30">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-6">
+              <div role="img" aria-label="Cartel de la película El último verano">
+                <span aria-hidden="true">E</span>
+                <span>Horizontes Latinos</span>
+              </div>
+              <div>
+                <p><time>Sáb 19 · 20:30</time> — Principal</p>
+                <h3 id="t-6">El último verano</h3>
+                <p>Pablo Ríos · México · 99 min · Comedia · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Últimas entradas</span>
+                  <button aria-label="Comprar entrada para El último verano, Sáb 19 a las 20:30">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-7">
+              <div role="img" aria-label="Cartel de la película Winter Harbour">
+                <span aria-hidden="true">W</span>
+                <span>Perlak</span>
+              </div>
+              <div>
+                <p><time>Dom 20 · 16:00</time> — Victoria Eugenia</p>
+                <h3 id="t-7">Winter Harbour</h3>
+                <p>Erin Walsh · Irlanda · 110 min · Drama · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Entradas disponibles</span>
+                  <button aria-label="Comprar entrada para Winter Harbour, Dom 20 a las 16:00">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-8">
+              <div role="img" aria-label="Cartel de la película Cicatriz">
+                <span aria-hidden="true">C</span>
+                <span>Sección Oficial</span>
+              </div>
+              <div>
+                <p><time>Dom 20 · 21:00</time> — Kursaal 1</p>
+                <h3 id="t-8">Cicatriz</h3>
+                <p>Marta Solé · España · 124 min · Thriller · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Últimas entradas</span>
+                  <button aria-label="Comprar entrada para Cicatriz, Dom 20 a las 21:00">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-9">
+              <div role="img" aria-label="Cartel de la película Ciudad de sal">
+                <span aria-hidden="true">C</span>
+                <span>Nuev@s Director@s</span>
+              </div>
+              <div>
+                <p><time>Lun 21 · 18:00</time> — Kursaal 2</p>
+                <h3 id="t-9">Ciudad de sal</h3>
+                <p>Tomás Vidal · Chile · 88 min · Documental · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Entradas disponibles</span>
+                  <button aria-label="Comprar entrada para Ciudad de sal, Lun 21 a las 18:00">Comprar</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="t-10">
+              <div role="img" aria-label="Cartel de la película Grand Hotel Riviera">
+                <span aria-hidden="true">G</span>
+                <span>Perlak</span>
+              </div>
+              <div>
+                <p><time>Mar 22 · 19:30</time> — Kursaal 1</p>
+                <h3 id="t-10">Grand Hotel Riviera</h3>
+                <p>Luca Moretti · Italia · 115 min · Comedia · VOSE</p>
+                <div>
+                  <span><span aria-hidden="true"></span>Agotado</span>
+                  <button disabled="" aria-label="Comprar entrada para Grand Hotel Riviera, Mar 22 a las 19:30">Agotado</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section id="entradas" aria-labelledby="ent-titulo">
+        <div>
+          <h2 id="ent-titulo">Entradas en tres pasos</h2>
+          <ol>
+            <li>
+              <span>1</span>
+              <h3>Elige la sesión</h3>
+              <p>Filtra la programación y pulsa «Comprar».</p>
+            </li>
+            <li>
+              <span>2</span>
+              <h3>Paga online</h3>
+              <p>Tarjeta o Bizum. Máximo 4 entradas por sesión.</p>
+            </li>
+            <li>
+              <span>3</span>
+              <h3>Entra con tu móvil</h3>
+              <p>Muestra el código QR en la puerta de la sala.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="salas-y-accesos" aria-labelledby="salas-titulo">
+        <h2 id="salas-titulo">Salas y accesos</h2>
+        <p>Todo lo que necesitas para llegar a tiempo y sin sorpresas.</p>
+        <div>
+          <article>
+            <h3>Kursaal</h3>
+            <address>Av. de Zurriola 1</address>
+            <dl>
+              <div>
+                <dt>Aforo: </dt>
+                <dd>Auditorio 1.806 · Sala 2: 624</dd>
+              </div>
+              <div>
+                <dt>Cómo llegar: </dt>
+                <dd>Bus 13, 27 · Estación Euskotren Kursaal</dd>
+              </div>
+              <div>
+                <dt>Accesibilidad: </dt>
+                <dd>Ascensor, bucle magnético, 8 plazas PMR</dd>
+              </div>
+            </dl>
+            <a href="https://maps.google.com/?q=Kursaal%20San%20Sebasti%C3%A1n" target="_blank" rel="noreferrer">Ver en el mapa</a>
+          </article>
+          <article>
+            <h3>Teatro Victoria Eugenia</h3>
+            <address>Paseo República Argentina 2</address>
+            <dl>
+              <div>
+                <dt>Aforo: </dt>
+                <dd>Aforo 900</dd>
+              </div>
+              <div>
+                <dt>Cómo llegar: </dt>
+                <dd>Bus 5, 8, 28 · 5 min del Boulevard</dd>
+              </div>
+              <div>
+                <dt>Accesibilidad: </dt>
+                <dd>Acceso lateral adaptado, 4 plazas PMR</dd>
+              </div>
+            </dl>
+            <a href="https://maps.google.com/?q=Teatro%20Victoria%20Eugenia%20San%20Sebasti%C3%A1n" target="_blank" rel="noreferrer">Ver en el mapa</a>
+          </article>
+          <article>
+            <h3>Teatro Principal</h3>
+            <address>Calle Mayor 3, Parte Vieja</address>
+            <dl>
+              <div>
+                <dt>Aforo: </dt>
+                <dd>Aforo 600</dd>
+              </div>
+              <div>
+                <dt>Cómo llegar: </dt>
+                <dd>Bus 5, 8, 28</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
